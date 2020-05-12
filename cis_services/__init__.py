@@ -31,8 +31,6 @@ from .global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
 from .global_load_balancer_v1 import GlobalLoadBalancerV1
 from .metrics_api_v1 import MetricsApiV1
 from .page_rule_api_v1 import PageRuleApiV1
-from .range_analytics_by_time_v1 import RangeAnalyticsByTimeV1
-from .range_analytics_summary_v1 import RangeAnalyticsSummaryV1
 from .range_applications_v1 import RangeApplicationsV1
 from .routing_v1 import RoutingV1
 from .security_events_api_v1 import SecurityEventsApiV1
