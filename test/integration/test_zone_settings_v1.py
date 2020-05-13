@@ -7,7 +7,6 @@ import os
 import unittest
 from cis_services.zones_settings_v1 import ZonesSettingsV1
 
-
 class TestZonesSettingsV1(unittest.TestCase):
     """ Sample function to call zones sdk functions """
 
@@ -27,7 +26,7 @@ class TestZonesSettingsV1(unittest.TestCase):
         # Delete the resources
         print("Clean up complete")
 
-    def test_1_zone_settings_dssec(self):
+    def test_1_zone_settings_dnssec(self):
         """ get zone dnssec """
         response = self.zonesSettings.get_zone_dnssec().get_result()
         assert response is not None and response.get('success') is True
@@ -446,6 +445,21 @@ class TestZonesSettingsV1(unittest.TestCase):
 
         """ Update waf setting """
         response = self.zonesSettings.update_web_application_firewall(
+            value=self.value).get_result()
+        assert response is not None and response.get('success') is True
+
+    def test_1_challenge_ttl_setting(self):
+        """ Get challenge ttl setting """
+        response = self.zonesSettings.get_challenge_ttl().get_result()
+        assert response is not None and response.get('success') is True
+        result = response.get('result')
+        if result.get('value') == 1800:
+            self.value = 7200
+        else:
+            self.value = 1800
+
+        """ Update challenge ttl setting """
+        response = self.zonesSettings.update_challenge_ttl(
             value=self.value).get_result()
         assert response is not None and response.get('success') is True
 
