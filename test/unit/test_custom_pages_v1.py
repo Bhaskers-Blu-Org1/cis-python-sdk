@@ -19,7 +19,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.custom_pages_v1 import CustomPagesV1
+from cis_services import CustomPagesV1
 
 crn = 'testString'
 zone_identifier = 'testString'

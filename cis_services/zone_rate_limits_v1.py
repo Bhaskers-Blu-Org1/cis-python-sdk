@@ -18,7 +18,6 @@
 Zone Rate Limits
 """
 
-from datetime import datetime
 from enum import Enum
 from typing import Dict, List
 import json
@@ -26,7 +25,7 @@ import json
 from ibm_cloud_sdk_core import BaseService, DetailedResponse
 from ibm_cloud_sdk_core.authenticators.authenticator import Authenticator
 from ibm_cloud_sdk_core.get_authenticator import get_authenticator_from_environment
-from ibm_cloud_sdk_core.utils import convert_model, datetime_to_string, string_to_datetime
+from ibm_cloud_sdk_core.utils import convert_model
 
 from .common import get_sdk_headers
 
@@ -103,9 +102,9 @@ class ZoneRateLimitsV1(BaseService):
 
     def list_all_zone_rate_limits(self, *, page: int = None, per_page: int = None, **kwargs) -> DetailedResponse:
         """
-        List all rate limits for a zone.
+        The details of Rate Limit for a given zone under a given service instance.
 
-        List all rate limits for a zone.
+        The details of Rate Limit for a given zone under a given service instance;.
 
         :param int page: (optional) Page number of paginated results.
         :param int per_page: (optional) Maximum number of rate limits per page.
@@ -131,41 +130,6 @@ class ZoneRateLimitsV1(BaseService):
                                        url=url,
                                        headers=headers,
                                        params=params)
-
-        response = self.send(request)
-        return response
-
-    #########################
-    # Get an rate limit
-    #########################
-
-
-    def get_rate_limit(self, rate_limit_identifier: str, **kwargs) -> DetailedResponse:
-        """
-        Get a rate limit's details by id.
-
-        Get the details of a rate limit for a given zone under a given service instance.
-
-        :param str rate_limit_identifier: Identifier of rate limit for the given
-               zone.
-        :param dict headers: A `dict` containing the request headers
-        :return: A `DetailedResponse` containing the result, headers and HTTP status code.
-        :rtype: DetailedResponse with `dict` result representing a `RatelimitResp` object
-        """
-
-        if rate_limit_identifier is None:
-            raise ValueError('rate_limit_identifier must be provided')
-        headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_rate_limit')
-        headers.update(sdk_headers)
-
-        if 'headers' in kwargs:
-            headers.update(kwargs.get('headers'))
-
-        url = '/v1/{0}/zones/{1}/rate_limits/{2}'.format(*self.encode_path_vars(self.crn, self.zone_identifier, rate_limit_identifier))
-        request = self.prepare_request(method='GET',
-                                       url=url,
-                                       headers=headers)
 
         response = self.send(request)
         return response
@@ -353,49 +317,36 @@ class ZoneRateLimitsV1(BaseService):
         return response
 
     #########################
-    # Get rate limit analytics
+    # getARateLimit
     #########################
 
 
-    def get_rate_limit_analytics(self, since: datetime, until: datetime, time_delta: int, **kwargs) -> DetailedResponse:
+    def get_rate_limit(self, rate_limit_identifier: str, **kwargs) -> DetailedResponse:
         """
-        Get rate limit analytics for a zone.
+        Get a rate limit's details by id.
 
-        Get rate limit analytics for a zone.
+        Get the details of a rate limit for a given zone under a given service instance.
 
-        :param datetime since: The beginning of the requested time frame.
-        :param datetime until: The end of the requested time frame.
-        :param int time_delta: The time interval (seconds) of each analytic's
-               record.
+        :param str rate_limit_identifier: Identifier of rate limit for the given
+               zone.
         :param dict headers: A `dict` containing the request headers
         :return: A `DetailedResponse` containing the result, headers and HTTP status code.
-        :rtype: DetailedResponse with `dict` result representing a `RatelimitAnalyticsResp` object
+        :rtype: DetailedResponse with `dict` result representing a `RatelimitResp` object
         """
 
-        if since is None:
-            raise ValueError('since must be provided')
-        if until is None:
-            raise ValueError('until must be provided')
-        if time_delta is None:
-            raise ValueError('time_delta must be provided')
+        if rate_limit_identifier is None:
+            raise ValueError('rate_limit_identifier must be provided')
         headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_rate_limit_analytics')
+        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_rate_limit')
         headers.update(sdk_headers)
-
-        params = {
-            'since': since,
-            'until': until,
-            'time_delta': time_delta
-        }
 
         if 'headers' in kwargs:
             headers.update(kwargs.get('headers'))
 
-        url = '/v1/{0}/zones/{1}/rate_limit_analytics'.format(*self.encode_path_vars(self.crn, self.zone_identifier))
+        url = '/v1/{0}/zones/{1}/rate_limits/{2}'.format(*self.encode_path_vars(self.crn, self.zone_identifier, rate_limit_identifier))
         request = self.prepare_request(method='GET',
                                        url=url,
-                                       headers=headers,
-                                       params=params)
+                                       headers=headers)
 
         response = self.send(request)
         return response

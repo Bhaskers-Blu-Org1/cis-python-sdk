@@ -20,35 +20,32 @@ The CIS Python SDK allows developers to programmatically interact with the follo
 
 Service Name | Imported Class Name
 --- | ---
-[Advanced DDoS](https://cloud.ibm.com/apidocs/cis) | AdvancedDdosSettingsV1
 [Cache](https://cloud.ibm.com/apidocs/cis/cache) | CachingApiV1
 [IP](https://cloud.ibm.com/apidocs/cis/ip) | CisIpApiV1
 [Custom Pages](https://cloud.ibm.com/apidocs/cis) | CustomPagesV1
 [DNS Records Bulk](https://cloud.ibm.com/apidocs/cis/dnsrecords) | DnsRecordBulkV1
 [DNS Records](https://cloud.ibm.com/apidocs/cis/dnsrecords) | DnsRecordsV1
-[Firewall Access Rules](https://cloud.ibm.com/apidocs/cis) | FirewallAccessRulesV1
-[Firewall Security Level](https://cloud.ibm.com/apidocs/cis) | FirewallApiV1
+[Firewall Access Rules](https://cloud.ibm.com/apidocs/cis/firewall-access-rule) | FirewallAccessRulesV1
+[Security Level Settings](https://cloud.ibm.com/apidocs/cis/security-level-settings) | FirewallApiV1
 [GLB Events](https://cloud.ibm.com/apidocs/cis/glb-events) | GlobalLoadBalancerEventsV1
 [GLB Monitor](https://cloud.ibm.com/apidocs/cis/glb-monitor) | GlobalLoadBalancerMonitorV1
 [GLB Pools](https://cloud.ibm.com/apidocs/cis/glb-pool) | GlobalLoadBalancerPoolsV0
 [GLB Service](https://cloud.ibm.com/apidocs/cis/glb) | GlobalLoadBalancerV1
 [Page Rules](https://cloud.ibm.com/apidocs/cis/page-rules) | PageRuleApiV1
-[Range Analytics by Time](https://cloud.ibm.com/apidocs/cis) | RangeAnalyticsByTimeV1
-[Range Analytics Summary](https://cloud.ibm.com/apidocs/cis) | RangeAnalyticsSummaryV1
 [Range Application](https://cloud.ibm.com/apidocs/cis/range) | RangeApplicationsV1
-[Routing](https://cloud.ibm.com/apidocs/cis) | RoutingV1
+[Routing](https://cloud.ibm.com/apidocs/cis/routing) | RoutingV1
 [Security Events](https://cloud.ibm.com/apidocs/cis) | SecurityEventsApiV1
 [SSL/TLS](https://cloud.ibm.com/apidocs/cis/tls) | SslCertificateApiV1
-[User Agent Blocking Rules](https://cloud.ibm.com/apidocs/cis) | UserAgentBlockingRulesV1
+[User Agent Blocking Rules](https://cloud.ibm.com/apidocs/cis/user-agent-rules) | UserAgentBlockingRulesV1
 [WAF Settings](https://cloud.ibm.com/apidocs/cis/waf) | WafApiV1
 [WAF Rule Groups](https://cloud.ibm.com/apidocs/cis/waf-groups) | WafRuleGroupsApiV1
 [WAF Rule Packages](https://cloud.ibm.com/apidocs/cis/waf-packages) | WafRulePackagesApiV1
 [WAF Rules](https://cloud.ibm.com/apidocs/cis/waf-rules) | WafRulesApiV1
-[Zone Firewall Access Rules](https://cloud.ibm.com/apidocs/cis) | ZoneFirewallAccessRulesV1
-[Zone Lockdown](https://cloud.ibm.com/apidocs/cis) | ZoneLockdownV1
+[Zone Firewall Access Rules](https://cloud.ibm.com/apidocs/cis/zone-firewall-access-rule) | ZoneFirewallAccessRulesV1
+[Zone Lockdown](https://cloud.ibm.com/apidocs/cis/zone-lockdown) | ZoneLockdownV1
 [Zone Rate Limits](https://cloud.ibm.com/apidocs/cis) | ZoneRateLimitsV1
 [Zone Settings](https://cloud.ibm.com/apidocs/cis/zonesettings) | ZonesSettingsV1
-[Zones](https://cloud.ibm.com/apidocs/cis/zones) | ZonesV1
+[Zones](https://test.cloud.ibm.com/apidocs/cis/zones) | ZonesV1
 
 ## Prerequisites
 

@@ -13,14 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from datetime import datetime, timezone
 from ibm_cloud_sdk_core.authenticators.no_auth_authenticator import NoAuthAuthenticator
 import inspect
 import json
 import pytest
 import requests
 import responses
-from cis_services.zone_rate_limits_v1 import ZoneRateLimitsV1
+from cis_services import ZoneRateLimitsV1
 
 crn = 'testString'
 zone_identifier = 'testString'
@@ -104,75 +103,6 @@ class TestListAllZoneRateLimits():
 # endregion
 ##############################################################################
 # End of Service: ListAllRateLimits
-##############################################################################
-
-##############################################################################
-# Start of Service: GetAnRateLimit
-##############################################################################
-# region
-
-#-----------------------------------------------------------------------------
-# Test Class for get_rate_limit
-#-----------------------------------------------------------------------------
-class TestGetRateLimit():
-
-    #--------------------------------------------------------
-    # get_rate_limit()
-    #--------------------------------------------------------
-    @responses.activate
-    def test_get_rate_limit_all_params(self):
-        # Set up mock
-        url = base_url + '/v1/testString/zones/testString/rate_limits/testString'
-        mock_response = '{"success": true, "errors": [["[]"]], "messages": [["[]"]], "result": {"id": "92f17202ed8bd63d69a66b86a49a8f6b", "disabled": false, "description": "Prevent multiple login failures to mitigate brute force attacks", "bypass": [{"name": "url", "value": "example.com/*"}], "threshold": 1000, "period": 60, "correlate": {"by": "nat"}, "action": {"mode": "simulate", "timeout": 60, "response": {"content_type": "text/plain", "body": "This request has been rate-limited."}}, "match": {"request": {"methods": ["_ALL_"], "schemes": ["_ALL_"], "url": "*.example.org/path*"}, "response": {"status": [403], "headers": [{"name": "Cf-Cache-Status", "op": "ne", "value": "HIT"}], "origin_traffic": false}}}}'
-        responses.add(responses.GET,
-                      url,
-                      body=mock_response,
-                      content_type='application/json',
-                      status=200)
-
-        # Set up parameter values
-        rate_limit_identifier = 'testString'
-
-        # Invoke method
-        response = service.get_rate_limit(
-            rate_limit_identifier
-        )
-
-        # Check for correct operation
-        assert len(responses.calls) == 1
-        assert response.status_code == 200
-
-
-    #--------------------------------------------------------
-    # test_get_rate_limit_required_params()
-    #--------------------------------------------------------
-    @responses.activate
-    def test_get_rate_limit_required_params(self):
-        # Set up mock
-        url = base_url + '/v1/testString/zones/testString/rate_limits/testString'
-        mock_response = '{"success": true, "errors": [["[]"]], "messages": [["[]"]], "result": {"id": "92f17202ed8bd63d69a66b86a49a8f6b", "disabled": false, "description": "Prevent multiple login failures to mitigate brute force attacks", "bypass": [{"name": "url", "value": "example.com/*"}], "threshold": 1000, "period": 60, "correlate": {"by": "nat"}, "action": {"mode": "simulate", "timeout": 60, "response": {"content_type": "text/plain", "body": "This request has been rate-limited."}}, "match": {"request": {"methods": ["_ALL_"], "schemes": ["_ALL_"], "url": "*.example.org/path*"}, "response": {"status": [403], "headers": [{"name": "Cf-Cache-Status", "op": "ne", "value": "HIT"}], "origin_traffic": false}}}}'
-        responses.add(responses.GET,
-                      url,
-                      body=mock_response,
-                      content_type='application/json',
-                      status=200)
-
-        # Set up parameter values
-        rate_limit_identifier = 'testString'
-
-        # Invoke method
-        response = service.get_rate_limit(
-            rate_limit_identifier
-        )
-
-        # Check for correct operation
-        assert len(responses.calls) == 1
-        assert response.status_code == 200
-
-
-# endregion
-##############################################################################
-# End of Service: GetAnRateLimit
 ##############################################################################
 
 ##############################################################################
@@ -517,23 +447,23 @@ class TestDeleteZoneRateLimit():
 ##############################################################################
 
 ##############################################################################
-# Start of Service: GetRateLimitAnalytics
+# Start of Service: GetARateLimit
 ##############################################################################
 # region
 
 #-----------------------------------------------------------------------------
-# Test Class for get_rate_limit_analytics
+# Test Class for get_rate_limit
 #-----------------------------------------------------------------------------
-class TestGetRateLimitAnalytics():
+class TestGetRateLimit():
 
     #--------------------------------------------------------
-    # get_rate_limit_analytics()
+    # get_rate_limit()
     #--------------------------------------------------------
     @responses.activate
-    def test_get_rate_limit_analytics_all_params(self):
+    def test_get_rate_limit_all_params(self):
         # Set up mock
-        url = base_url + '/v1/testString/zones/testString/rate_limit_analytics'
-        mock_response = '{"since": "2019-01-01T12:00:00", "until": "2019-01-01T12:00:00", "time_delta": 60, "golden_record": true, "labels": "unknown property type: labels", "timeseries": [{"since": "2019-01-01T12:00:00", "until": "2019-01-01T12:00:00", "rules": "unknown property type: rules"}]}'
+        url = base_url + '/v1/testString/zones/testString/rate_limits/testString'
+        mock_response = '{"success": true, "errors": [["[]"]], "messages": [["[]"]], "result": {"id": "92f17202ed8bd63d69a66b86a49a8f6b", "disabled": false, "description": "Prevent multiple login failures to mitigate brute force attacks", "bypass": [{"name": "url", "value": "example.com/*"}], "threshold": 1000, "period": 60, "correlate": {"by": "nat"}, "action": {"mode": "simulate", "timeout": 60, "response": {"content_type": "text/plain", "body": "This request has been rate-limited."}}, "match": {"request": {"methods": ["_ALL_"], "schemes": ["_ALL_"], "url": "*.example.org/path*"}, "response": {"status": [403], "headers": [{"name": "Cf-Cache-Status", "op": "ne", "value": "HIT"}], "origin_traffic": false}}}}'
         responses.add(responses.GET,
                       url,
                       body=mock_response,
@@ -541,34 +471,26 @@ class TestGetRateLimitAnalytics():
                       status=200)
 
         # Set up parameter values
-        since = datetime.fromtimestamp(1580236840.123456, timezone.utc)
-        until = datetime.fromtimestamp(1580236840.123456, timezone.utc)
-        time_delta = 60
+        rate_limit_identifier = 'testString'
 
         # Invoke method
-        response = service.get_rate_limit_analytics(
-            since,
-            until,
-            time_delta
+        response = service.get_rate_limit(
+            rate_limit_identifier
         )
 
         # Check for correct operation
         assert len(responses.calls) == 1
         assert response.status_code == 200
-        # Validate query params
-        query_string = responses.calls[0].request.url.split('?',1)[1]
-        query_string = requests.utils.unquote(query_string)
-        assert 'time_delta={}'.format(time_delta) in query_string
 
 
     #--------------------------------------------------------
-    # test_get_rate_limit_analytics_required_params()
+    # test_get_rate_limit_required_params()
     #--------------------------------------------------------
     @responses.activate
-    def test_get_rate_limit_analytics_required_params(self):
+    def test_get_rate_limit_required_params(self):
         # Set up mock
-        url = base_url + '/v1/testString/zones/testString/rate_limit_analytics'
-        mock_response = '{"since": "2019-01-01T12:00:00", "until": "2019-01-01T12:00:00", "time_delta": 60, "golden_record": true, "labels": "unknown property type: labels", "timeseries": [{"since": "2019-01-01T12:00:00", "until": "2019-01-01T12:00:00", "rules": "unknown property type: rules"}]}'
+        url = base_url + '/v1/testString/zones/testString/rate_limits/testString'
+        mock_response = '{"success": true, "errors": [["[]"]], "messages": [["[]"]], "result": {"id": "92f17202ed8bd63d69a66b86a49a8f6b", "disabled": false, "description": "Prevent multiple login failures to mitigate brute force attacks", "bypass": [{"name": "url", "value": "example.com/*"}], "threshold": 1000, "period": 60, "correlate": {"by": "nat"}, "action": {"mode": "simulate", "timeout": 60, "response": {"content_type": "text/plain", "body": "This request has been rate-limited."}}, "match": {"request": {"methods": ["_ALL_"], "schemes": ["_ALL_"], "url": "*.example.org/path*"}, "response": {"status": [403], "headers": [{"name": "Cf-Cache-Status", "op": "ne", "value": "HIT"}], "origin_traffic": false}}}}'
         responses.add(responses.GET,
                       url,
                       body=mock_response,
@@ -576,28 +498,20 @@ class TestGetRateLimitAnalytics():
                       status=200)
 
         # Set up parameter values
-        since = datetime.fromtimestamp(1580236840.123456, timezone.utc)
-        until = datetime.fromtimestamp(1580236840.123456, timezone.utc)
-        time_delta = 60
+        rate_limit_identifier = 'testString'
 
         # Invoke method
-        response = service.get_rate_limit_analytics(
-            since,
-            until,
-            time_delta
+        response = service.get_rate_limit(
+            rate_limit_identifier
         )
 
         # Check for correct operation
         assert len(responses.calls) == 1
         assert response.status_code == 200
-        # Validate query params
-        query_string = responses.calls[0].request.url.split('?',1)[1]
-        query_string = requests.utils.unquote(query_string)
-        assert 'time_delta={}'.format(time_delta) in query_string
 
 
 # endregion
 ##############################################################################
-# End of Service: GetRateLimitAnalytics
+# End of Service: GetARateLimit
 ##############################################################################
 

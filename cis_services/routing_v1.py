@@ -102,7 +102,7 @@ class RoutingV1(BaseService):
     #########################
 
 
-    def get_routing_smart_routing(self, **kwargs) -> DetailedResponse:
+    def get_smart_routing(self, **kwargs) -> DetailedResponse:
         """
         get Routing feature smart routing setting.
 
@@ -114,7 +114,7 @@ class RoutingV1(BaseService):
         """
 
         headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_routing_smart_routing')
+        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_smart_routing')
         headers.update(sdk_headers)
 
         if 'headers' in kwargs:
@@ -133,7 +133,7 @@ class RoutingV1(BaseService):
     #########################
 
 
-    def update_routing_smart_routing(self, *, value: str = None, **kwargs) -> DetailedResponse:
+    def update_smart_routing(self, *, value: str = None, **kwargs) -> DetailedResponse:
         """
         Update Routing feature smart routing setting.
 
@@ -146,7 +146,7 @@ class RoutingV1(BaseService):
         """
 
         headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='update_routing_smart_routing')
+        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='update_smart_routing')
         headers.update(sdk_headers)
 
         data = {
@@ -164,145 +164,6 @@ class RoutingV1(BaseService):
                                        url=url,
                                        headers=headers,
                                        data=data)
-
-        response = self.send(request)
-        return response
-
-    #########################
-    # Get Routing feature tiered caching setting
-    #########################
-
-
-    def get_routing_tiered_caching(self, **kwargs) -> DetailedResponse:
-        """
-        get Routing feature tiered caching setting.
-
-        Get Routing feature tiered caching setting for a zone.
-
-        :param dict headers: A `dict` containing the request headers
-        :return: A `DetailedResponse` containing the result, headers and HTTP status code.
-        :rtype: DetailedResponse with `dict` result representing a `RoutingTieredCachingResp` object
-        """
-
-        headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_routing_tiered_caching')
-        headers.update(sdk_headers)
-
-        if 'headers' in kwargs:
-            headers.update(kwargs.get('headers'))
-
-        url = '/v1/{0}/zones/{1}/routing/tiered_caching'.format(*self.encode_path_vars(self.crn, self.zone_identifier))
-        request = self.prepare_request(method='GET',
-                                       url=url,
-                                       headers=headers)
-
-        response = self.send(request)
-        return response
-
-    #########################
-    # Update Routing feature tiered caching setting
-    #########################
-
-
-    def update_routing_tiered_caching(self, *, value: str = None, **kwargs) -> DetailedResponse:
-        """
-        Update Routing feature tiered caching setting.
-
-        Update Routing feature tiered caching setting for a zone.
-
-        :param str value: (optional) Value.
-        :param dict headers: A `dict` containing the request headers
-        :return: A `DetailedResponse` containing the result, headers and HTTP status code.
-        :rtype: DetailedResponse with `dict` result representing a `RoutingTieredCachingResp` object
-        """
-
-        headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='update_routing_tiered_caching')
-        headers.update(sdk_headers)
-
-        data = {
-            'value': value
-        }
-        data = {k: v for (k, v) in data.items() if v is not None}
-        data = json.dumps(data)
-        headers['content-type'] = 'application/json'
-
-        if 'headers' in kwargs:
-            headers.update(kwargs.get('headers'))
-
-        url = '/v1/{0}/zones/{1}/routing/tiered_caching'.format(*self.encode_path_vars(self.crn, self.zone_identifier))
-        request = self.prepare_request(method='PATCH',
-                                       url=url,
-                                       headers=headers,
-                                       data=data)
-
-        response = self.send(request)
-        return response
-
-    #########################
-    # Get Routing Latency Analytics
-    #########################
-
-
-    def get_routing_latency(self, *, bins: int = None, **kwargs) -> DetailedResponse:
-        """
-        get Routing Latency Analytics.
-
-        Get Routing Latency Analytics for a given zone.
-
-        :param int bins: (optional) the number of bins.
-        :param dict headers: A `dict` containing the request headers
-        :return: A `DetailedResponse` containing the result, headers and HTTP status code.
-        :rtype: DetailedResponse with `dict` result representing a `RoutingLatencyResp` object
-        """
-
-        headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_routing_latency')
-        headers.update(sdk_headers)
-
-        params = {
-            'bins': bins
-        }
-
-        if 'headers' in kwargs:
-            headers.update(kwargs.get('headers'))
-
-        url = '/v1/{0}/zones/{1}/routing/latency'.format(*self.encode_path_vars(self.crn, self.zone_identifier))
-        request = self.prepare_request(method='GET',
-                                       url=url,
-                                       headers=headers,
-                                       params=params)
-
-        response = self.send(request)
-        return response
-
-    #########################
-    # Get Routing Latency Colos Analytics
-    #########################
-
-
-    def get_routing_latency_colos(self, **kwargs) -> DetailedResponse:
-        """
-        get Routing Latency Colos Analytics.
-
-        Get Routing Latency Colos Analytics for a given zone.
-
-        :param dict headers: A `dict` containing the request headers
-        :return: A `DetailedResponse` containing the result, headers and HTTP status code.
-        :rtype: DetailedResponse with `dict` result representing a `RoutingLatencyColosResp` object
-        """
-
-        headers = {}
-        sdk_headers = get_sdk_headers(service_name=self.DEFAULT_SERVICE_NAME, service_version='V1', operation_id='get_routing_latency_colos')
-        headers.update(sdk_headers)
-
-        if 'headers' in kwargs:
-            headers.update(kwargs.get('headers'))
-
-        url = '/v1/{0}/zones/{1}/routing/latency/colos'.format(*self.encode_path_vars(self.crn, self.zone_identifier))
-        request = self.prepare_request(method='GET',
-                                       url=url,
-                                       headers=headers)
 
         response = self.send(request)
         return response

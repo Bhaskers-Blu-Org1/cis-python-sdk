@@ -333,7 +333,6 @@ class GetInstanceCustomPageEnums:
         COUNTRY_CHALLENGE = 'country_challenge'
         IP_BLOCK = 'ip_block'
         UNDER_ATTACK = 'under_attack'
-        ALWAYS_ONLINE = 'always_online'
 
 
 class UpdateInstanceCustomPageEnums:
@@ -352,7 +351,6 @@ class UpdateInstanceCustomPageEnums:
         COUNTRY_CHALLENGE = 'country_challenge'
         IP_BLOCK = 'ip_block'
         UNDER_ATTACK = 'under_attack'
-        ALWAYS_ONLINE = 'always_online'
 
 
 class GetZoneCustomPageEnums:
@@ -371,7 +369,6 @@ class GetZoneCustomPageEnums:
         COUNTRY_CHALLENGE = 'country_challenge'
         IP_BLOCK = 'ip_block'
         UNDER_ATTACK = 'under_attack'
-        ALWAYS_ONLINE = 'always_online'
 
 
 class UpdateZoneCustomPageEnums:
@@ -390,5 +387,3 @@ class UpdateZoneCustomPageEnums:
         COUNTRY_CHALLENGE = 'country_challenge'
         IP_BLOCK = 'ip_block'
         UNDER_ATTACK = 'under_attack'
-        ALWAYS_ONLINE = 'always_online'
-

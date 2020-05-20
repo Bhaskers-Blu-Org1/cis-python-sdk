@@ -31,7 +31,7 @@ class TestCustomPagesV1(unittest.TestCase):
         url = "https://beta.sdk.cistest-load.com/index.html"
         state = ["default", "customized"]
         page_ids = ["basic_challenge", "waf_challenge", "waf_block", "ratelimit_block",
-                    "country_challenge", "ip_block", "under_attack", "500_errors", "1000_errors", "always_online"]
+                    "country_challenge", "ip_block", "under_attack", "500_errors", "1000_errors"]
 
         # update zone custom pages with url
         for page_id in page_ids:
@@ -60,7 +60,7 @@ class TestCustomPagesV1(unittest.TestCase):
         url = "https://beta.sdk.cistest-load.com/index.html"
         state = ["default", "customized"]
         page_ids = ["basic_challenge", "waf_challenge", "waf_block", "ratelimit_block",
-                    "country_challenge", "ip_block", "under_attack", "500_errors", "1000_errors", "always_online"]
+                    "country_challenge", "ip_block", "under_attack", "500_errors", "1000_errors"]
 
         # update custom pages with url
         for page_id in page_ids:

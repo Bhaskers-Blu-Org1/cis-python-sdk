@@ -19,7 +19,7 @@ import json
 import pytest
 import requests
 import responses
-from cis_services.page_rule_api_v1 import PageRuleApiV1
+from cis_services import PageRuleApiV1
 
 crn = 'testString'
 zone_id = 'testString'

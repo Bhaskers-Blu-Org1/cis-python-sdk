@@ -504,25 +504,5 @@ class TestRateLimitsApiV1(unittest.TestCase):
                 self.rate_limit.delete_zone_rate_limit(
                     rate_limit_identifier=id.get("id"))
 
-    def test_1_get_rate_limit_analytics(self):
-        with self.assertRaises(ValueError) as val:
-            self.rate_limit.get_rate_limit_analytics(
-                since=None, until="", time_delta="").get_result()
-            self.assertEqual(val.exception.msg, 'since must be provided')
-
-        with self.assertRaises(ValueError) as val:
-            self.rate_limit.get_rate_limit_analytics(
-                since="", until=None, time_delta="").get_result()
-            self.assertEqual(val.exception.msg, 'until must be provided')
-
-        with self.assertRaises(ValueError) as val:
-            self.rate_limit.get_rate_limit_analytics(
-                since="", until="", time_delta=None).get_result()
-            self.assertEqual(val.exception.msg, 'time_delta must be provided')
-
-        self.rate_limit.list_all_zone_rate_limits(
-            since="", until="", time_delta="")
-
-
 if __name__ == '__main__':
     unittest.main()

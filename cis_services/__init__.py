@@ -17,7 +17,6 @@ from ibm_cloud_sdk_core import IAMTokenManager, DetailedResponse, BaseService, A
 
 from .common import get_sdk_headers
 from .version import __version__
-from .advanced_ddos_settings_v1 import AdvancedDdosSettingsV1
 from .caching_api_v1 import CachingApiV1
 from .cis_ip_api_v1 import CisIpApiV1
 from .custom_pages_v1 import CustomPagesV1
