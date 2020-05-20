@@ -102,9 +102,9 @@ class ZoneRateLimitsV1(BaseService):
 
     def list_all_zone_rate_limits(self, *, page: int = None, per_page: int = None, **kwargs) -> DetailedResponse:
         """
-        The details of Rate Limit for a given zone under a given service instance.
+        List all rate limits.
 
-        The details of Rate Limit for a given zone under a given service instance;.
+        The details of Rate Limit for a given zone under a given service instance.
 
         :param int page: (optional) Page number of paginated results.
         :param int per_page: (optional) Maximum number of rate limits per page.
