@@ -7,7 +7,7 @@ Integration test code to execute ssl certificate client functions
 
 import os
 import unittest
-from cis_services import SslCertificateApiV1
+from ibm_cloud_cis_services import SslCertificateApiV1
 
 
 class TestSSLCertV1(unittest.TestCase):

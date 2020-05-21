@@ -6,7 +6,7 @@ Integration test code to execute cis ip api functions
 """
 import os
 import unittest
-from cis_services.cis_ip_api_v1 import CisIpApiV1
+from ibm_cloud_cis_services.cis_ip_api_v1 import CisIpApiV1
 
 class TestCisIpApiV1 (unittest.TestCase):
     def setUp(self):

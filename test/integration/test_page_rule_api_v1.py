@@ -7,7 +7,7 @@ Integration test code for page rule service
 
 import os
 import unittest
-from cis_services.page_rule_api_v1 import PageRuleApiV1
+from ibm_cloud_cis_services.page_rule_api_v1 import PageRuleApiV1
 
 
 class TestPageRuleApiV1(unittest.TestCase):

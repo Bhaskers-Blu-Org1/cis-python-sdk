@@ -5,8 +5,8 @@ Integration test code to execute waf rules api functions
 """
 import os
 import unittest
-from cis_services.waf_rules_api_v1 import WafRulesApiV1
-from cis_services.waf_rule_packages_api_v1 import WafRulePackagesApiV1
+from ibm_cloud_cis_services.waf_rules_api_v1 import WafRulesApiV1
+from ibm_cloud_cis_services.waf_rule_packages_api_v1 import WafRulePackagesApiV1
 
 
 class TestWafRulesApiV1 (unittest.TestCase):

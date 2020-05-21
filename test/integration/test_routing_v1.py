@@ -7,7 +7,7 @@ Integration test code for Routing
 
 import os
 import unittest
-from cis_services.routing_v1 import RoutingV1
+from ibm_cloud_cis_services.routing_v1 import RoutingV1
 
 
 class TestRoutingApiV1(unittest.TestCase):

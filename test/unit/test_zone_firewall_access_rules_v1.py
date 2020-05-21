@@ -19,7 +19,7 @@ import json
 import pytest
 import requests
 import responses
-from cis_services.zone_firewall_access_rules_v1 import ZoneFirewallAccessRulesV1
+from ibm_cloud_cis_services.zone_firewall_access_rules_v1 import ZoneFirewallAccessRulesV1
 
 crn = 'testString'
 zone_identifier = 'testString'

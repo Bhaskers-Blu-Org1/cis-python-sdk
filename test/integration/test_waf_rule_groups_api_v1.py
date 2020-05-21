@@ -5,8 +5,8 @@ Integration test code to execute waf rule groups api functions
 """
 import os
 import unittest
-from cis_services.waf_rule_groups_api_v1 import WafRuleGroupsApiV1
-from cis_services.waf_rule_packages_api_v1 import WafRulePackagesApiV1
+from ibm_cloud_cis_services.waf_rule_groups_api_v1 import WafRuleGroupsApiV1
+from ibm_cloud_cis_services.waf_rule_packages_api_v1 import WafRulePackagesApiV1
 
 
 class TestWafRuleGroupsApiV1 (unittest.TestCase):

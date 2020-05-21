@@ -7,8 +7,8 @@ Integration test code to execute global load balancer pools functions
 
 import os
 import unittest
-from cis_services.global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
-from cis_services.global_load_balancer_monitor_v1 import GlobalLoadBalancerMonitorV1
+from ibm_cloud_cis_services.global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
+from ibm_cloud_cis_services.global_load_balancer_monitor_v1 import GlobalLoadBalancerMonitorV1
 
 
 class TestGlobalLoadBalancerPoolsV0 (unittest.TestCase):

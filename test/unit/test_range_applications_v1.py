@@ -19,7 +19,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.range_applications_v1 import RangeApplicationsV1
+from ibm_cloud_cis_services.range_applications_v1 import RangeApplicationsV1
 
 crn = 'testString'
 zone_identifier = 'testString'

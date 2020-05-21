@@ -18,7 +18,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
+from ibm_cloud_cis_services.global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
 
 crn = 'testString'
 

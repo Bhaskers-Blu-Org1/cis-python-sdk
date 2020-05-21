@@ -9,7 +9,7 @@ import os
 import unittest
 import uuid
 from ibm_cloud_sdk_core.api_exception import ApiException
-from cis_services.zones_v1 import ZonesV1
+from ibm_cloud_cis_services.zones_v1 import ZonesV1
 
 
 class TestZonesV1(unittest.TestCase):

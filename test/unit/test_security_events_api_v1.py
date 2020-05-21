@@ -20,7 +20,7 @@ import json
 import pytest
 import requests
 import responses
-from cis_services.security_events_api_v1 import SecurityEventsApiV1
+from ibm_cloud_cis_services.security_events_api_v1 import SecurityEventsApiV1
 
 crn = 'testString'
 zone_id = 'testString'

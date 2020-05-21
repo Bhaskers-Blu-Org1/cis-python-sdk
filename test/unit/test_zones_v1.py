@@ -18,7 +18,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.zones_v1 import ZonesV1
+from ibm_cloud_cis_services.zones_v1 import ZonesV1
 
 crn = 'testString'
 

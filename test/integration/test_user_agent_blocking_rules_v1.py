@@ -7,7 +7,7 @@ Integration test code to execute user agent blocking rules functions
 
 import os
 import unittest
-from cis_services.user_agent_blocking_rules_v1 import UserAgentBlockingRulesV1
+from ibm_cloud_cis_services.user_agent_blocking_rules_v1 import UserAgentBlockingRulesV1
 
 
 class TestUserAgentBlockingRulesV1 (unittest.TestCase):

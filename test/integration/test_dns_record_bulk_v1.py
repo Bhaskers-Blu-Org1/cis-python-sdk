@@ -7,8 +7,8 @@ Integration test code to execute DNS Import/Export Zone settings
 
 import os
 import unittest
-from cis_services.dns_record_bulk_v1 import DnsRecordBulkV1
-from cis_services.dns_records_v1 import DnsRecordsV1
+from ibm_cloud_cis_services.dns_record_bulk_v1 import DnsRecordBulkV1
+from ibm_cloud_cis_services.dns_records_v1 import DnsRecordsV1
 
 
 class TestDnsRecordBulkV1(unittest.TestCase):

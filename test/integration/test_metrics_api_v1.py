@@ -8,7 +8,7 @@ Integration test code to execute metrics api functions
 import os
 import unittest
 import datetime
-from cis_services.metrics_api_v1 import MetricsApiV1
+from ibm_cloud_cis_services.metrics_api_v1 import MetricsApiV1
 
 
 class TestMetricsApiV1(unittest.TestCase):

@@ -7,7 +7,7 @@ Integration test code to execute global load balancer events functions
 
 import os
 import unittest
-from cis_services.global_load_balancer_events_v1 import GlobalLoadBalancerEventsV1
+from ibm_cloud_cis_services.global_load_balancer_events_v1 import GlobalLoadBalancerEventsV1
 
 
 class TestGlobalLoadBalancerEventsV1 (unittest.TestCase):

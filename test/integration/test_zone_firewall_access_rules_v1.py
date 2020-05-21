@@ -7,7 +7,7 @@ Integration test code to execute zone firewall access rules api
 
 import os
 import unittest
-from cis_services.zone_firewall_access_rules_v1 import ZoneFirewallAccessRulesV1
+from ibm_cloud_cis_services.zone_firewall_access_rules_v1 import ZoneFirewallAccessRulesV1
 
 
 class TestZoneFirewallAccessRules(unittest.TestCase):

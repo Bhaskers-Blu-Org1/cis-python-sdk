@@ -7,7 +7,7 @@ Integration test code to execute global load balancer monitor functions
 
 import os
 import unittest
-from cis_services.global_load_balancer_monitor_v1 import GlobalLoadBalancerMonitorV1
+from ibm_cloud_cis_services.global_load_balancer_monitor_v1 import GlobalLoadBalancerMonitorV1
 
 
 class TestGlobalLoadBalancerMonitorV1 (unittest.TestCase):

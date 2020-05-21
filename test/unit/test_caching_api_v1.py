@@ -18,7 +18,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.caching_api_v1 import CachingApiV1
+from ibm_cloud_cis_services.caching_api_v1 import CachingApiV1
 
 crn = 'testString'
 zone_id = 'testString'

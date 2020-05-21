@@ -5,7 +5,7 @@ Integration test code to execute zones settings functions
 """
 import os
 import unittest
-from cis_services.zones_settings_v1 import ZonesSettingsV1
+from ibm_cloud_cis_services.zones_settings_v1 import ZonesSettingsV1
 
 class TestZonesSettingsV1(unittest.TestCase):
     """ Sample function to call zones sdk functions """

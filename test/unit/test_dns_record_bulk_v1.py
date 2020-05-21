@@ -20,7 +20,7 @@ import json
 import pytest
 import responses
 import tempfile
-from cis_services.dns_record_bulk_v1 import DnsRecordBulkV1
+from ibm_cloud_cis_services.dns_record_bulk_v1 import DnsRecordBulkV1
 
 crn = 'testString'
 zone_identifier = 'testString'

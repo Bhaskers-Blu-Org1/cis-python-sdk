@@ -7,7 +7,7 @@ Integration test code for Rate Limit Service
 
 import os
 import unittest
-from cis_services.zone_rate_limits_v1 import ZoneRateLimitsV1
+from ibm_cloud_cis_services.zone_rate_limits_v1 import ZoneRateLimitsV1
 
 
 class TestRateLimitsApiV1(unittest.TestCase):

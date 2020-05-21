@@ -19,7 +19,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.global_load_balancer_events_v1 import GlobalLoadBalancerEventsV1
+from ibm_cloud_cis_services.global_load_balancer_events_v1 import GlobalLoadBalancerEventsV1
 
 crn = 'testString'
 

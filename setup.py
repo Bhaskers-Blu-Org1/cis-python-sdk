@@ -20,7 +20,7 @@ import sys
 import pkg_resources
 
 __version__ = '0.0.0'
-PACKAGE_NAME = 'cis_services'
+PACKAGE_NAME = 'ibm_cloud_cis_services'
 
 with open('requirements.txt') as f:
     install_requires = [str(req) for req in pkg_resources.parse_requirements(f)]

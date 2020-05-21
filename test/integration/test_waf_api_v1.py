@@ -7,7 +7,7 @@ Integration test code to execute waf api
 
 import os
 import unittest
-from cis_services import WafApiV1
+from ibm_cloud_cis_services import WafApiV1
 
 
 class TestWafApiV1(unittest.TestCase):

@@ -7,7 +7,7 @@ Integration test code for Range App Services
 
 import os
 import unittest
-from cis_services.range_applications_v1 import RangeApplicationsV1
+from ibm_cloud_cis_services.range_applications_v1 import RangeApplicationsV1
 
 
 class TestRangeApplicationsApiV1(unittest.TestCase):

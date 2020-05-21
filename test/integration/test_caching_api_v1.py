@@ -7,7 +7,7 @@ Integration test code to execute caching api
 
 import os
 import unittest
-from cis_services.caching_api_v1 import CachingApiV1
+from ibm_cloud_cis_services.caching_api_v1 import CachingApiV1
 
 
 class TestCachingApiV1(unittest.TestCase):

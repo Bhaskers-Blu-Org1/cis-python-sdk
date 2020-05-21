@@ -18,7 +18,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.firewall_api_v1 import FirewallApiV1
+from ibm_cloud_cis_services.firewall_api_v1 import FirewallApiV1
 
 crn = 'testString'
 zone_identifier = 'testString'

@@ -19,7 +19,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.zones_settings_v1 import ZonesSettingsV1
+from ibm_cloud_cis_services.zones_settings_v1 import ZonesSettingsV1
 
 crn = 'testString'
 zone_identifier = 'testString'
@@ -1475,15 +1475,15 @@ class TestUpdateMinify():
             html=html,
             js=js,
         )
-
+        print(response)
         # Check for correct operation
         assert len(responses.calls) == 1
         assert response.status_code == 200
         # Validate body params
         req_body = json.loads(str(responses.calls[0].request.body, 'utf-8'))
-        assert req_body['css'] == css
-        assert req_body['html'] == html
-        assert req_body['js'] == js
+        assert req_body.get("value")['css'] == css
+        assert req_body.get("value")['html'] == html
+        assert req_body.get("value")['js'] == js
 
 
     #--------------------------------------------------------

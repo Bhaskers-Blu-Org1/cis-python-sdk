@@ -7,7 +7,7 @@ Integration test code to execute firewall access rules api
 
 import os
 import unittest
-from cis_services import FirewallAccessRulesV1
+from ibm_cloud_cis_services import FirewallAccessRulesV1
 
 class TestFirewallAccessRules(unittest.TestCase):
     """ Test class to call Firewall Access Rules API functions """

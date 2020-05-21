@@ -19,7 +19,7 @@ Test methods in the common module
 """
 
 import unittest
-from cis_services import common
+from ibm_cloud_cis_services import common
 
 class TestCommon(unittest.TestCase):
     """

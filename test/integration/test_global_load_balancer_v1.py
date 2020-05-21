@@ -8,10 +8,10 @@ Integration test code to execute global load balancer functions
 import os
 import unittest
 import uuid
-from cis_services.global_load_balancer_v1 import GlobalLoadBalancerV1
-from cis_services.global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
-from cis_services.global_load_balancer_monitor_v1 import GlobalLoadBalancerMonitorV1
-from cis_services.zones_v1 import ZonesV1
+from ibm_cloud_cis_services.global_load_balancer_v1 import GlobalLoadBalancerV1
+from ibm_cloud_cis_services.global_load_balancer_pools_v0 import GlobalLoadBalancerPoolsV0
+from ibm_cloud_cis_services.global_load_balancer_monitor_v1 import GlobalLoadBalancerMonitorV1
+from ibm_cloud_cis_services.zones_v1 import ZonesV1
 
 
 class TestGlobalLoadBalancerV1 (unittest.TestCase):

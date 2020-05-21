@@ -19,7 +19,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.ssl_certificate_api_v1 import SslCertificateApiV1
+from ibm_cloud_cis_services.ssl_certificate_api_v1 import SslCertificateApiV1
 
 crn = 'testString'
 zone_identifier = 'testString'

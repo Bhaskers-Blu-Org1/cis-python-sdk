@@ -19,7 +19,7 @@ import json
 import pytest
 import requests
 import responses
-from cis_services.metrics_api_v1 import MetricsApiV1
+from ibm_cloud_cis_services.metrics_api_v1 import MetricsApiV1
 
 crn = 'testString'
 zone_id = 'testString'

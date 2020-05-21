@@ -18,7 +18,7 @@ import inspect
 import json
 import pytest
 import responses
-from cis_services.cis_ip_api_v1 import CisIpApiV1
+from ibm_cloud_cis_services.cis_ip_api_v1 import CisIpApiV1
 
 
 service = CisIpApiV1(

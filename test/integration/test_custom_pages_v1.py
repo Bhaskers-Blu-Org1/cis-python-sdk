@@ -7,7 +7,7 @@ Advanced Custom Pages integration test
 
 import os
 import unittest
-from cis_services.custom_pages_v1 import CustomPagesV1
+from ibm_cloud_cis_services.custom_pages_v1 import CustomPagesV1
 
 
 class TestCustomPagesV1(unittest.TestCase):

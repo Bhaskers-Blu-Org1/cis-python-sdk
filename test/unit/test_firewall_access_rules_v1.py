@@ -20,7 +20,7 @@ import json
 import pytest
 import requests
 import responses
-from cis_services.firewall_access_rules_v1 import FirewallAccessRulesV1
+from ibm_cloud_cis_services.firewall_access_rules_v1 import FirewallAccessRulesV1
 
 crn = 'testString'
 

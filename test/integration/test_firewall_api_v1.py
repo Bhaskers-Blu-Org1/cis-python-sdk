@@ -7,7 +7,7 @@ Integration test code to execute firewall security level setting
 
 import os
 import unittest
-from cis_services import FirewallApiV1
+from ibm_cloud_cis_services import FirewallApiV1
 
 
 class TestFirewallApiV1(unittest.TestCase):

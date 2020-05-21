@@ -7,7 +7,7 @@ Integration test code for security events
 
 import os
 import unittest
-from cis_services.security_events_api_v1 import SecurityEventsApiV1
+from ibm_cloud_cis_services.security_events_api_v1 import SecurityEventsApiV1
 
 
 class TestSecurityEventsApiV1(unittest.TestCase):

@@ -19,7 +19,7 @@ import json
 import pytest
 import requests
 import responses
-from cis_services import ZoneRateLimitsV1
+from ibm_cloud_cis_services import ZoneRateLimitsV1
 
 crn = 'testString'
 zone_identifier = 'testString'

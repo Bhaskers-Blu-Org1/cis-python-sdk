@@ -7,7 +7,7 @@ Integration test code to execute dns record client functions
 
 import os
 import unittest
-from cis_services import DnsRecordsV1
+from ibm_cloud_cis_services import DnsRecordsV1
 
 
 class TestDnsRecordV1(unittest.TestCase):

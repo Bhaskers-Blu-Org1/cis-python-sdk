@@ -7,7 +7,7 @@ Integration test code for zone firewall lockdown service
 
 import os
 import unittest
-from cis_services.zone_lockdown_v1 import ZoneLockdownV1
+from ibm_cloud_cis_services.zone_lockdown_v1 import ZoneLockdownV1
 
 
 class TestZoneLockdownV1(unittest.TestCase):
