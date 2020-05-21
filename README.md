@@ -45,7 +45,7 @@ Service Name | Imported Class Name
 [Zone Lockdown](https://cloud.ibm.com/apidocs/cis/zone-lockdown) | ZoneLockdownV1
 [Zone Rate Limits](https://cloud.ibm.com/apidocs/cis) | ZoneRateLimitsV1
 [Zone Settings](https://cloud.ibm.com/apidocs/cis/zonesettings) | ZonesSettingsV1
-[Zones](https://test.cloud.ibm.com/apidocs/cis/zones) | ZonesV1
+[Zones](https://cloud.ibm.com/apidocs/cis/zones) | ZonesV1
 
 ## Prerequisites
 
