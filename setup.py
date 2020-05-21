@@ -19,13 +19,11 @@ import os
 import sys
 import pkg_resources
 
-__version__ = '0.0.1'
+__version__ = '0.0.0'
 PACKAGE_NAME = 'cis_services'
 
 with open('requirements.txt') as f:
     install_requires = [str(req) for req in pkg_resources.parse_requirements(f)]
-with open('requirements-dev.txt') as f:
-    tests_require = [str(req) for req in pkg_resources.parse_requirements(f)]
 
 if sys.argv[-1] == 'publish':
     # test server
@@ -79,7 +77,6 @@ setup(name=PACKAGE_NAME,
       description='cis client library',
       license='Apache 2.0',
       install_requires=install_requires,
-      tests_require=tests_require,
       cmdclass={'test': PyTest, 'test_unit': PyTestUnit, 'test_integration': PyTestIntegration},
       author='IBM',
       author_email='author_email@us.ibm.com',

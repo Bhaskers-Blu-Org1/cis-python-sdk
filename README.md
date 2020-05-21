@@ -60,13 +60,13 @@ Service Name | Imported Class Name
 To install, use `pip` or `easy_install`:
 
 ```bash
-pip install --upgrade "cis_services>=0.0.1"
+pip install --upgrade "cis-services>=0.0.1"
 ```
 
 or
 
 ```bash
-easy_install --upgrade "cis_services>=0.0.1"
+easy_install --upgrade "cis-services>=0.0.1"
 ```
 
 ## Using the SDK
