@@ -16,6 +16,7 @@ class TestCustomPagesV1(unittest.TestCase):
     def setUp(self):
         self.crn = os.getenv("CRN")
         self.zone_id = os.getenv("ZONE_ID")
+        self.url = os.getenv("CUSTOM_PAGE_URL")
         self.endpoint = os.getenv("API_ENDPOINT")
         self.custom_pages = CustomPagesV1.new_instance(
             crn=self.crn, zone_identifier=self.zone_id, service_name="cis_services")
@@ -28,7 +29,6 @@ class TestCustomPagesV1(unittest.TestCase):
 
     def test_1_zone_custom_pages(self):
         """ test to update/get/list all zone custom pages """
-        url = "https://beta.sdk.cistest-load.com/index.html"
         state = ["default", "customized"]
         page_ids = ["basic_challenge", "waf_challenge", "waf_block", "ratelimit_block",
                     "country_challenge", "ip_block", "under_attack", "500_errors", "1000_errors"]
@@ -36,10 +36,10 @@ class TestCustomPagesV1(unittest.TestCase):
         # update zone custom pages with url
         for page_id in page_ids:
             resp = self.custom_pages.update_zone_custom_page(
-                page_identifier=page_id, url=url, state=state[1])
+                page_identifier=page_id, url=self.url, state=state[1])
             assert resp is not None
             assert resp.status_code == 200
-            assert resp.get_result().get("result")["url"] == url
+            assert resp.get_result().get("result")["url"] == self.url
 
         # get zone custom page instances
         for page_id in page_ids:
@@ -48,7 +48,7 @@ class TestCustomPagesV1(unittest.TestCase):
             assert resp is not None
             assert resp.status_code == 200
             assert resp.get_result().get("result")[
-                "state"] == state[1] and resp.get_result().get("result")["url"] == url
+                "state"] == state[1] and resp.get_result().get("result")["url"] == self.url
 
         # List all the custom page instances for zones
         resp = self.custom_pages.list_zone_custom_pages()
@@ -57,7 +57,6 @@ class TestCustomPagesV1(unittest.TestCase):
 
     def test_1_custom_pages(self):
         """ test to update/get/list all custom pages """
-        url = "https://beta.sdk.cistest-load.com/index.html"
         state = ["default", "customized"]
         page_ids = ["basic_challenge", "waf_challenge", "waf_block", "ratelimit_block",
                     "country_challenge", "ip_block", "under_attack", "500_errors", "1000_errors"]
@@ -65,10 +64,10 @@ class TestCustomPagesV1(unittest.TestCase):
         # update custom pages with url
         for page_id in page_ids:
             resp = self.custom_pages.update_instance_custom_page(
-                page_identifier=page_id, url=url, state=state[1])
+                page_identifier=page_id, url=self.url, state=state[1])
             assert resp is not None
             assert resp.status_code == 200
-            assert resp.get_result().get("result")["url"] == url
+            assert resp.get_result().get("result")["url"] == self.url
 
         # get custom page instances
         for page_id in page_ids:
@@ -77,7 +76,7 @@ class TestCustomPagesV1(unittest.TestCase):
             assert resp is not None
             assert resp.status_code == 200
             assert resp.get_result().get("result")[
-                "state"] == state[1] and resp.get_result().get("result")["url"] == url
+                "state"] == state[1] and resp.get_result().get("result")["url"] == self.url
 
         # List all the custom page instances
         resp = self.custom_pages.list_instance_custom_pages()
