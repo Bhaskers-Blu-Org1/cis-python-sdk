@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright 2016 IBM All Rights Reserved.
+# Copyright 2020 IBM All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -91,13 +91,16 @@ setup(name=PACKAGE_NAME,
       classifiers=[
           'Programming Language :: Python',
           'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
           'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: Apache Software License',
           'Operating System :: OS Independent',
           'Topic :: Software Development :: Libraries :: Python Modules',
-          'Topic :: Software Development :: Libraries :: Application '
-          'Frameworks',
+          'Topic :: Software Development :: Libraries :: Application Frameworks',
       ],
       zip_safe=True
      )
