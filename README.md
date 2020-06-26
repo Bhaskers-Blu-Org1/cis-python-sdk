@@ -1,3 +1,5 @@
+# This repository is deprecated. It is moved to https://github.com/IBM/networking-python-sdk
+
 # IBM Cloud Internet Services Python SDK Version 0.0.1
 
 [![Build Status](https://travis.ibm.com/ibmcloud/cis-python-sdk.svg?token=rbgzvDpUs1FYz2haTgpg&branch=master)](https://travis.ibm.com/ibmcloud/cis-python-sdk)
